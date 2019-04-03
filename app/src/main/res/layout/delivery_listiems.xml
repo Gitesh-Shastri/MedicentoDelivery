@@ -5,73 +5,60 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/border"
-    android:layout_margin="5dp">
+    android:layout_margin="4dp"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="4dp">
+        >
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Distributor : "
-            android:gravity="right"
-
-            />
+            android:layout_weight="1"
+            android:text="No of phramacies :"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            tools:text="Tulasi phrama"
-            android:id="@+id/distributor"/>
-
+            tools:text="5"
+            android:id="@+id/numPharmacies"
+            />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="4dp">
+        >
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Adress : "
-            android:gravity="right"
-            />
+            android:layout_weight="1"
+
+            android:text="No of Areas :"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            tools:text="Bannglore
- karnataka"
-            android:id="@+id/address"/>
-
+            tools:text="5"
+            android:id="@+id/numAreas"
+            />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="4dp">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Time : "
-            android:gravity="right"
-            />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:text="5 am to 10 am"
-            android:id="@+id/time"/>
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="time : "
+        android:id="@+id/time1"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Start"/>
-
+            android:text="start"
+            android:layout_marginRight="15dp"/>
     </LinearLayout>
-
 
 </LinearLayout>

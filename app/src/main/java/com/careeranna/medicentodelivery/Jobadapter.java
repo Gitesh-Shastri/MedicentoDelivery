@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class Jobadapter extends RecyclerView.Adapter<Jobadapter.Jobholder> {
     private ArrayList<Pendingjobs> mPendingjobs;
-    private static ClickListener clickListener;
+
 
 
     public Jobadapter(ArrayList<Pendingjobs> pendingjobs) {
@@ -38,8 +38,6 @@ public class Jobadapter extends RecyclerView.Adapter<Jobadapter.Jobholder> {
         add.setText(pendingjobs.getmAdress());
         TextView time= jobholder.mtime;
         time.setText(pendingjobs.getmTime());
-        //TextView distance = jobholder.mDistance;
-        //distance.setText(pendingjobs.getMdistance());
     }
 
     @Override
@@ -48,7 +46,7 @@ public class Jobadapter extends RecyclerView.Adapter<Jobadapter.Jobholder> {
     }
 
 
-    class  Jobholder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    class  Jobholder extends RecyclerView.ViewHolder  {
 
         public TextView mDistributor;
         public TextView mAddress;
@@ -60,19 +58,8 @@ public class Jobadapter extends RecyclerView.Adapter<Jobadapter.Jobholder> {
             super(itemView);
             mDistributor = itemView.findViewById(R.id.distributor);
             mAddress = itemView.findViewById(R.id.address);
-            mtime=itemView.findViewById(R.id.time);
+            mtime = itemView.findViewById(R.id.time);
         }
 
-        @Override
-        public void onClick(View v) {
-            clickListener.onItemClick(getAdapterPosition(), v);
-
-        }
-    }
-    public void setOnItemClickListener(ClickListener cl) {
-        Jobadapter.clickListener = cl;
-    }
-    public  interface ClickListener {
-        void onItemClick(int position, View v);
     }
 }

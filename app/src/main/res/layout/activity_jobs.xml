@@ -20,6 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Order Pickup"
+                android:id="@+id/op1"
                 android:layout_marginLeft="@dimen/fab_margin"
                 android:textSize="30sp"
                 />
@@ -36,6 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/fab_margin"
                 android:text="Delivery"
+                android:id="@+id/d1"
                 android:textSize="30dp"/>
             <android.support.v7.widget.RecyclerView
                 android:layout_width="match_parent"
@@ -49,6 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Return Pickup"
+                android:id="@+id/rp1"
                 android:textSize="30dp"
                 android:layout_marginLeft="@dimen/fab_margin"/>
             <android.support.v7.widget.RecyclerView
