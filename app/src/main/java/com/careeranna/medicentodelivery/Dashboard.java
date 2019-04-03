@@ -113,7 +113,7 @@ public class Dashboard extends AppCompatActivity {
         tw1.setText(dp);
         tw2.setText(ac);
         tw3.setText(dc);
-        pb.setVisibility(View.INVISIBLE);
+        pb.setVisibility(View.GONE);
         recyclerView.setLayoutManager(new LinearLayoutManager(Dashboard.this));
         ad.add(new AreaNames("hiiii","hhhhhhhhh"));
         ad.add(new AreaNames("hiiii","hhhhhhhhh"));

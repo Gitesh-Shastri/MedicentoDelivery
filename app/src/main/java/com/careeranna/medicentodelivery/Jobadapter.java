@@ -15,10 +15,8 @@ public class Jobadapter extends RecyclerView.Adapter<Jobadapter.Jobholder> {
     private static ClickListener clickListener;
 
 
-
-    public Jobadapter(ArrayList<Pendingjobs> pendingjobs,int i) {
+    public Jobadapter(ArrayList<Pendingjobs> pendingjobs) {
         mPendingjobs = pendingjobs;
-
     }
 
     @NonNull
