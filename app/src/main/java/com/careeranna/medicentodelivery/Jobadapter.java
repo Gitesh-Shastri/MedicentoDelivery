@@ -13,20 +13,20 @@ import java.util.ArrayList;
 public class Jobadapter extends RecyclerView.Adapter<Jobadapter.Jobholder> {
     private ArrayList<Pendingjobs> mPendingjobs;
     private static ClickListener clickListener;
-    private int listiems;
+
 
 
     public Jobadapter(ArrayList<Pendingjobs> pendingjobs,int i) {
         mPendingjobs = pendingjobs;
-        listiems=i;
+
     }
 
     @NonNull
     @Override
-    public Jobholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i,int listiems) {
+    public Jobholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         Context context = viewGroup.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(listiems, viewGroup, false);
+        View view = inflater.inflate(R.layout.pending_job_listitems, viewGroup, false);
         return new Jobholder(view);
     }
 
