@@ -1,5 +1,6 @@
 package com.careeranna.medicentodelivery;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -21,6 +23,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+
+
 
 public class Dashboard extends AppCompatActivity {
 
@@ -50,12 +54,21 @@ public class Dashboard extends AppCompatActivity {
         
         tw3=(TextView)findViewById(R.id.lateorder);
 
-        recyclerView=(RecyclerView) findViewById(R.id.recycle);
+        recyclerView= findViewById(R.id.recycle);
 
         pb = findViewById(R.id.pb);
+        TextView jobs=findViewById(R.id.jobs);
+        jobs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "fd", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(Dashboard.this,Jobs.class);
+                startActivity(intent);
+            }
+        });
         
-        Json j=new Json();
-        j.execute();
+        Json js= new Json();
+        js.execute();
 
 
     }
@@ -70,7 +83,7 @@ public class Dashboard extends AppCompatActivity {
             InputStream inputStream=httpURLConnection.getInputStream();
             BufferedReader bufferedReader=new BufferedReader( new InputStreamReader(inputStream));
             String line="";
-            while (line!=null){
+            while ((line=bufferedReader.readLine())!=null){
                 data=data+line;
             }
             JSONObject jsonObject=new JSONObject(data);
@@ -82,6 +95,7 @@ public class Dashboard extends AppCompatActivity {
                 JSONObject jo=  Ja.getJSONObject(i);
                 ad.add(new AreaNames((jo.getString("area")),jo.getString("No_of_delivery")) );
             }
+
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -101,9 +115,28 @@ public class Dashboard extends AppCompatActivity {
         tw3.setText(dc);
         pb.setVisibility(View.INVISIBLE);
         recyclerView.setLayoutManager(new LinearLayoutManager(Dashboard.this));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
         adapter=new AreaAdapter(ad);
         recyclerView.setAdapter(adapter);
-
     }
     }
 
