@@ -1,5 +1,6 @@
 package com.careeranna.medicentodelivery;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -31,14 +32,14 @@ public class Jobs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jobs);
         rc=findViewById(R.id.rc);
-        /*pendingjobs.add(new Pendingjobs("delhi","banglore","5 am to 10 am"));
         pendingjobs.add(new Pendingjobs("delhi","banglore","5 am to 10 am"));
         pendingjobs.add(new Pendingjobs("delhi","banglore","5 am to 10 am"));
         pendingjobs.add(new Pendingjobs("delhi","banglore","5 am to 10 am"));
         pendingjobs.add(new Pendingjobs("delhi","banglore","5 am to 10 am"));
         pendingjobs.add(new Pendingjobs("delhi","banglore","5 am to 10 am"));
         pendingjobs.add(new Pendingjobs("delhi","banglore","5 am to 10 am"));
-        pendingjobs.add(new Pendingjobs("delhi","banglore","5 am to 10 am"));*/
+        pendingjobs.add(new Pendingjobs("delhi","banglore","5 am to 10 am"));
+        pendingjobs.add(new Pendingjobs("delhi","banglore","5 am to 10 am"));
 
         jobadapter=new Jobadapter(pendingjobs);
         rc.setLayoutManager(new LinearLayoutManager(Jobs.this));
@@ -62,7 +63,7 @@ public class Jobs extends AppCompatActivity {
             TextView t=findViewById(R.id.op1);
             t.setVisibility(View.GONE);
         }
-        deliveryjobs.add(new Deliveryjobs("5","6","8:00AM"));
+       deliveryjobs.add(new Deliveryjobs("5","6","8:00AM"));
         deliveryjobs.add(new Deliveryjobs("5","6","8:00AM"));
         deliveryjobs.add(new Deliveryjobs("5","6","8:00AM"));
         deliveryjobs.add(new Deliveryjobs("5","6","8:00AM"));
@@ -97,10 +98,10 @@ public class Jobs extends AppCompatActivity {
 
 
 
+        /*returnjobs.add(new Deliveryjobs("5","8","10:00 Am"));
         returnjobs.add(new Deliveryjobs("5","8","10:00 Am"));
         returnjobs.add(new Deliveryjobs("5","8","10:00 Am"));
-        returnjobs.add(new Deliveryjobs("5","8","10:00 Am"));
-        returnjobs.add(new Deliveryjobs("5","8","10:00 Am"));
+        returnjobs.add(new Deliveryjobs("5","8","10:00 Am"));*/
         rc3=findViewById(R.id.rc3);
         DeliveryAdapter returnadapter=new DeliveryAdapter(returnjobs);
         rc3.setLayoutManager(new LinearLayoutManager(Jobs.this));
@@ -124,7 +125,14 @@ public class Jobs extends AppCompatActivity {
             TextView t=findViewById(R.id.rp1);
             t.setVisibility(View.GONE);
         }
-
+        TextView t1=findViewById(R.id.packing2);
+        t1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Jobs.this,Packing.class);
+                startActivity(i);
+            }
+        });
     }
 }
 

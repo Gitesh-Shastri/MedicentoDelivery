@@ -85,6 +85,7 @@
             android:layout_weight="1"
             android:text="package"
             android:gravity="center"
+            android:id="@+id/packing2"
             android:background="@drawable/border_curved"/>
         <TextView
             android:layout_width="0dp"

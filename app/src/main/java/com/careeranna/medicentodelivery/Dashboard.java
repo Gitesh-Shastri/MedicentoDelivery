@@ -66,6 +66,15 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        TextView packing=findViewById(R.id.packing1);
+        packing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Dashboard.this,Packing.class);
+                startActivity(i);
+
+            }
+        });
         
         Json js= new Json();
         js.execute();
@@ -115,6 +124,7 @@ public class Dashboard extends AppCompatActivity {
         tw3.setText(dc);
         pb.setVisibility(View.GONE);
         recyclerView.setLayoutManager(new LinearLayoutManager(Dashboard.this));
+        /*ad.add(new AreaNames("hiiii","hhhhhhhhh"));
         ad.add(new AreaNames("hiiii","hhhhhhhhh"));
         ad.add(new AreaNames("hiiii","hhhhhhhhh"));
         ad.add(new AreaNames("hiiii","hhhhhhhhh"));
@@ -133,8 +143,7 @@ public class Dashboard extends AppCompatActivity {
         ad.add(new AreaNames("hiiii","hhhhhhhhh"));
         ad.add(new AreaNames("hiiii","hhhhhhhhh"));
         ad.add(new AreaNames("hiiii","hhhhhhhhh"));
-        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
-        ad.add(new AreaNames("hiiii","hhhhhhhhh"));
+        ad.add(new AreaNames("hiiii","hhhhhhhhh"));*/
         adapter=new AreaAdapter(ad);
         recyclerView.setAdapter(adapter);
     }
