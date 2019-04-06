@@ -14,7 +14,6 @@ import java.util.ArrayList;
 
 public class Packing extends AppCompatActivity {
     private RecyclerView packingrcv;
-
     final ArrayList<packagingdetails> packdetails= new ArrayList<packagingdetails>();
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +26,7 @@ public class Packing extends AppCompatActivity {
         packdetails.add(new packagingdetails("vamshi medical","banglore","155788","550","25","5 am 28th feb","Tulsasi"));
         packdetails.add(new packagingdetails("vamshi medical","banglore","155788","550","25","5 am 28th feb","Tulsasi"));
         packingrcv=findViewById(R.id.packingrc);
-        Packingadapter packingadapter=new Packingadapter(packdetails);
+        Packingadapter packingadapter=new Packingadapter(packdetails,Packing.this);
         packingrcv.setLayoutManager(new LinearLayoutManager(Packing.this));
         packingrcv.setAdapter(packingadapter);
         Button calldist=findViewById(R.id.calldistributor);
