@@ -48,6 +48,9 @@ public class Jobs extends AppCompatActivity {
                 new Rclistener(this, rc , new Rclistener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
+
+                        Intent  i=new Intent(Jobs.this,Checklist.class);
+                        startActivity(i);
                         Toast.makeText(getApplicationContext(), "hihi", Toast.LENGTH_SHORT).show();
                     }
 

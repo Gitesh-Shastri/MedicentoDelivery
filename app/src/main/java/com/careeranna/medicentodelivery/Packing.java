@@ -29,26 +29,6 @@ public class Packing extends AppCompatActivity {
         Packingadapter packingadapter=new Packingadapter(packdetails,Packing.this);
         packingrcv.setLayoutManager(new LinearLayoutManager(Packing.this));
         packingrcv.setAdapter(packingadapter);
-        Button calldist=findViewById(R.id.calldistributor);
-        /*calldist.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:0123456789"));
-                startActivity(intent);
-            }
-        });*/
-       /* Button sendorder=findViewById(R.id.sendorder);
-        sendorder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-                smsIntent.setType("vnd.android-dir/mms-sms");
-                //smsIntent.putExtra("address", "12125551212");
-                smsIntent.putExtra("sms_body","Body of Message");
-                startActivity(smsIntent);
-            }
-        });*/
 
     }
 }

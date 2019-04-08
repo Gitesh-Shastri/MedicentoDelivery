@@ -59,6 +59,11 @@ public class Packingadapter extends RecyclerView.Adapter<Packingadapter.Packingh
         sendmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                smsIntent.setType("vnd.android-dir/mms-sms");
+                //smsIntent.putExtra("address", "12125551212");
+                smsIntent.putExtra("sms_body","Body of Message");
+                context.startActivity(smsIntent);
 
             }
         });

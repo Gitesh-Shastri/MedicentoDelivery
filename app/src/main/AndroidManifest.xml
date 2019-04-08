@@ -30,6 +30,8 @@
             android:label="Packing"
             >
         </activity>
+        <activity android:name=".Checklist"
+            android:label="Checklist"></activity>
     </application>
 
 </manifest>
