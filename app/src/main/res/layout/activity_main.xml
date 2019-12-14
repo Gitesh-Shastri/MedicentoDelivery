@@ -68,11 +68,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="390dp"
         android:visibility="invisible"
+
         />
 
     <TextView
         android:id="@+id/check"
-        android:layout_width="200dp"
+        android:layout_width="201dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="390dp"
